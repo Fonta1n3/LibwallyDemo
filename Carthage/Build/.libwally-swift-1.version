@@ -1,0 +1,20 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "v0.1-alpha",
+  "iOS" : [
+    {
+      "hash" : "a37bd6a9009896188efe8b74d246c11c931dc011f16b67eae2c4f58ef979e019",
+      "name" : "LibWally",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+    }
+  ]
+}
