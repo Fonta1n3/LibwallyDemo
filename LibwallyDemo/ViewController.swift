@@ -17,7 +17,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         addressLabel.text = msigAddress()
+        //createTx()
     }
+    
+    // MARK: CODE FOR CREATING A MULTISIG ADDRESS
     
     // Generates a new seed and creates a 2/2 bip67 witness script hash address from two random pubkeys derived from the same master key
     private func msigAddress() -> String? {
@@ -87,6 +90,38 @@ class ViewController: UIViewController {
         
         return xpub.pubKey
     }
+    
+    
+    
+    
+    // MARK: CODE FOR CREATING A MULTISIG TRANSACTION
+    
+//    private func createTx() {
+//        let wif1 = "cRtSbgrwqTUHXSCUqxF32LyubDwaJvsjjoVxSJ7CTFwUrLvaAqPq"
+//        let wif2 = "cV7dwpvTTA5N2Zhw2Bb4DyaNsiHh9GoGtPHQcucaZ4dA1tEeLfVB"
+//
+//        guard let key1 = Key(wif1, .testnet) else { return }
+//
+//        guard let key2 = Key(wif2, .testnet) else { return }
+//
+//        let scriptPubKey = ScriptPubKey(multisig: [key1.pubKey, key2.pubKey], threshold: 2, bip67: true)
+//
+//        // tb1qymexfsv454rjg2ct65arrsg6fmcvazja7rag23geulfd6p32p9zq56dep0 has a balance of 0.0001 tbtc which will act as our input
+//        guard let msigAddress = Address(scriptPubKey, .testnet) else { return }
+//
+//        // The txid of our input
+//        guard let inputTx = Transaction("0fa000b5a87c6536f9af1a1495780435fe6efeb2670389bd260fceb7bf96432f") else { return }
+//
+//        let vout: UInt32 = 1
+//        let amount: Satoshi = 10000
+//
+//        // PAIN POINT: LIBWALLY-SWIFT DOES NOT ALLOW US TO BUILD MULTISIG TRANSACTIONS, ONLY SINGLE SIG
+//
+//        //let witness = WitnessType.
+//
+//        //let input = TxInput(inputTx, vout, amount, nil, <#T##witness: Witness?##Witness?#>, scriptPubKey)
+//
+//    }
 
 }
 
